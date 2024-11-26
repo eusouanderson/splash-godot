@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cggxf21tm4fgd"
+path="res://.godot/imported/coin.wav-1653380c5ad18964bee9c2840ecc2b54.sample"
+
+[deps]
+
+source_file="res://Tiles/Large tiles/Thin outline/brackeys_platformer_assets/sounds/coin.wav"
+dest_files=["res://.godot/imported/coin.wav-1653380c5ad18964bee9c2840ecc2b54.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

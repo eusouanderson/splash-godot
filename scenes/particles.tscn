@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://drajmgh4gstw4"]
+
+[ext_resource type="Texture2D" uid="uid://cbv8f31an3xy7" path="res://assets/background/particles_flipbook.png" id="1_oxxxf"]
+[ext_resource type="Script" path="res://scripts/gpu_particles_2d.gd" id="2_6j3up"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1byg2"]
+gravity = Vector3(0, 80, 0)
+scale_min = 0.1
+scale_max = 0.2
+color = Color(0.247278, 0.632082, 0.388151, 1)
+turbulence_enabled = true
+turbulence_noise_strength = 2.81
+turbulence_noise_scale = 10.0
+sub_emitter_mode = 3
+sub_emitter_amount_at_collision = 1
+
+[node name="Paticles" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(-5, 4)
+process_material = SubResource("ParticleProcessMaterial_1byg2")
+texture = ExtResource("1_oxxxf")
+lifetime = 4.0
+randomness = 1.0
+visibility_rect = Rect2(1, 1, 1, 1)
+draw_order = 0
+script = ExtResource("2_6j3up")

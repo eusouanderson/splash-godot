@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cx2kiw88hb415"
+path="res://.godot/imported/power_up.wav-81386a25ec37204e83774b5106de555c.sample"
+
+[deps]
+
+source_file="res://Tiles/Large tiles/Thin outline/brackeys_platformer_assets/sounds/power_up.wav"
+dest_files=["res://.godot/imported/power_up.wav-81386a25ec37204e83774b5106de555c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

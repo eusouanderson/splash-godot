@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctbokl6qu8s0t"]
+
+[ext_resource type="PackedScene" uid="uid://di6p5jiau2hi3" path="res://scenes/player1.tscn" id="1_g0occ"]
+[ext_resource type="Script" path="res://scripts/player_1.gd" id="2_uxd8n"]
+[ext_resource type="PackedScene" uid="uid://2tfoovrtejmq" path="res://scenes/player2.tscn" id="3_xtrd1"]
+[ext_resource type="Script" path="res://scripts/player_2.gd" id="4_ug1xi"]
+[ext_resource type="Script" path="res://scripts/camera.gd" id="5_uaitw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2ytjc"]
+distance = -1.0
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+script = ExtResource("5_uaitw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_2ytjc")
+
+[node name="Player1" parent="." instance=ExtResource("1_g0occ")]
+script = ExtResource("2_uxd8n")
+
+[node name="Player2" parent="." instance=ExtResource("3_xtrd1")]
+position = Vector2(1, 0)
+script = ExtResource("4_ug1xi")

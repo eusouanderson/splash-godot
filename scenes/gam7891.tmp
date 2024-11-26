@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://ctbokl6qu8s0t"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_03qhy"]
+[ext_resource type="PackedScene" uid="uid://di6p5jiau2hi3" path="res://scenes/player1.tscn" id="1_g0occ"]
+[ext_resource type="Script" path="res://scripts/player_1.gd" id="2_uxd8n"]
+[ext_resource type="Script" path="res://scripts/camera_p_1.gd" id="3_h82r2"]
+[ext_resource type="PackedScene" uid="uid://2tfoovrtejmq" path="res://scenes/player2.tscn" id="3_xtrd1"]
+[ext_resource type="Script" path="res://scripts/player_2.gd" id="4_ug1xi"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2ytjc"]
+distance = -1.0
+
+[sub_resource type="CameraTexture" id="CameraTexture_54enx"]
+
+[sub_resource type="CameraTexture" id="CameraTexture_iw0ij"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_03qhy")
+
+[node name="SubViewportContainer1" type="SubViewportContainer" parent="."]
+offset_left = 3.0
+offset_top = -189.0
+offset_right = 515.0
+offset_bottom = 323.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer1"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="."]
+offset_left = -517.0
+offset_top = -193.0
+offset_right = -5.0
+offset_bottom = 319.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer2"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Player1" parent="." instance=ExtResource("1_g0occ")]
+script = ExtResource("2_uxd8n")
+
+[node name="Camera2D" type="Camera2D" parent="Player1"]
+script = ExtResource("3_h82r2")
+
+[node name="Player2" parent="." instance=ExtResource("3_xtrd1")]
+script = ExtResource("4_ug1xi")
+
+[node name="Camera2D" type="Camera2D" parent="Player2"]
+script = ExtResource("3_h82r2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_2ytjc")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 443.0
+offset_top = -36.0
+offset_right = 483.0
+offset_bottom = 4.0
+texture = SubResource("CameraTexture_54enx")
+
+[node name="TextureRect1" type="TextureRect" parent="."]
+offset_left = -493.0
+offset_top = -29.0
+offset_right = -453.0
+offset_bottom = 11.0
+texture = SubResource("CameraTexture_iw0ij")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cekwq8hg0f004"
+path="res://.godot/imported/explosion.wav-3913514c9a33064b436db2c070716380.sample"
+
+[deps]
+
+source_file="res://Tiles/Large tiles/Thin outline/brackeys_platformer_assets/sounds/explosion.wav"
+dest_files=["res://.godot/imported/explosion.wav-3913514c9a33064b436db2c070716380.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
